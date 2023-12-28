@@ -17,12 +17,14 @@ public class PasswordsEncoderUtility {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		String password = "1234";
+		String password = "Pass@hjg";
 		String encodedPwd = NoOpPasswordEncoder.getInstance().encode(password);
 		System.out.println(encodedPwd);		
 		
 		encodedPwd = new BCryptPasswordEncoder().encode(password);
-		System.out.println(encodedPwd);		
+		System.out.println(encodedPwd);	
+		
+		System.out.println(new BCryptPasswordEncoder().matches("Pass@hj", encodedPwd));	
 
 		/*
 		 * encodedPwd = new Pbkdf2PasswordEncoder(password, 0, 0, 0).encode(password);
