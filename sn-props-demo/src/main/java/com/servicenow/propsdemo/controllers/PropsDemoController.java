@@ -5,6 +5,8 @@ package com.servicenow.propsdemo.controllers;
 
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,6 +22,8 @@ import com.servicenow.propsdemo.services.StudentService;
 @RestController
 @RequestMapping("/api/v1/students")
 public class PropsDemoController {
+	
+	public static final Logger LOGGER = LoggerFactory.getLogger(PropsDemoController.class);
 
 	@Autowired
 	private StudentService studentService;
@@ -31,6 +35,13 @@ public class PropsDemoController {
 	
 	@GetMapping("/all")
 	public List<Student> showStudents() {
+		
+		LOGGER.trace("Trace level log");
+		LOGGER.debug("Debug level log");
+		LOGGER.info("Info level log");
+		LOGGER.warn("Warn level log");
+		LOGGER.error("Error level log");
+		
 		return studentService.showStudents();
 	}
 	

@@ -1,0 +1,16 @@
+2024-01-02T10:13:07.891+05:30  INFO 5944 --- [main] com.servicenow.SnPropsDemoApplication    : Starting SnPropsDemoApplication using Java 21.0.1 with PID 5944 (D:\OnlineClass\ServiceNow\MM-SN-Batch1\sn-props-demo\target\classes started by dorak in D:\OnlineClass\ServiceNow\MM-SN-Batch1\sn-props-demo)
+2024-01-02T10:13:07.897+05:30  INFO 5944 --- [main] com.servicenow.SnPropsDemoApplication    : The following 1 profile is active: "default"
+2024-01-02T10:13:10.067+05:30  INFO 5944 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-01-02T10:13:10.093+05:30  INFO 5944 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-02T10:13:10.094+05:30  INFO 5944 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2024-01-02T10:13:10.210+05:30  INFO 5944 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-02T10:13:10.210+05:30  INFO 5944 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2208 ms
+2024-01-02T10:13:11.017+05:30  INFO 5944 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-01-02T10:13:11.032+05:30  INFO 5944 --- [main] com.servicenow.SnPropsDemoApplication    : Started SnPropsDemoApplication in 4.15 seconds (process running for 4.965)
+2024-01-02T10:13:23.003+05:30  INFO 5944 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-02T10:13:23.003+05:30  INFO 5944 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-01-02T10:13:23.006+05:30  INFO 5944 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2024-01-02T10:13:23.062+05:30 DEBUG 5944 --- [http-nio-8080-exec-1] c.s.p.controllers.PropsDemoController    : Debug level log
+2024-01-02T10:13:23.063+05:30  INFO 5944 --- [http-nio-8080-exec-1] c.s.p.controllers.PropsDemoController    : Info level log
+2024-01-02T10:13:23.063+05:30  WARN 5944 --- [http-nio-8080-exec-1] c.s.p.controllers.PropsDemoController    : Warn level log
+2024-01-02T10:13:23.063+05:30 ERROR 5944 --- [http-nio-8080-exec-1] c.s.p.controllers.PropsDemoController    : Error level log
