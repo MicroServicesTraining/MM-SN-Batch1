@@ -9,6 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -19,6 +20,7 @@ import com.servicenow.propsdemo.services.StudentService;
 /**
  * 
  */
+@RefreshScope
 @RestController
 @RequestMapping("/api/v1/students")
 public class PropsDemoController {
@@ -29,19 +31,17 @@ public class PropsDemoController {
 	private StudentService studentService;
 	
 	//private String lmsBanner = "LMS Banner";
-
-	@Value("${lms.banner:Dummy Banner}")
+	
+	@Value("${sb.greeting.message:Dummy Banner}")
 	private String lmsBanner;
 	
 	@GetMapping("/all")
-	public List<Student> showStudents() {
-		
+	public List<Student> showStudents() {	
 		LOGGER.trace("Trace level log");
 		LOGGER.debug("Debug level log");
 		LOGGER.info("Info level log");
 		LOGGER.warn("Warn level log");
 		LOGGER.error("Error level log");
-		
 		return studentService.showStudents();
 	}
 	
@@ -53,21 +53,6 @@ public class PropsDemoController {
 	
 	@GetMapping("/limits")
 	public String showBannerAndLimits() {
-		return studentService.showBannerAndLimits();
+		return lmsBanner;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }
